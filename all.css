@@ -46,6 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+*, *::before, *::after{
+    box-sizing:border-box;
+}
 img{
     vertical-align: middle;
     max-width: 100%;
@@ -77,6 +80,9 @@ body{
 }
 .pb160{
     padding-bottom: 160px;
+}
+.pl38{
+    padding-left: 38px;
 }
 .pb144{
     padding-bottom: 144px;
@@ -126,6 +132,9 @@ body{
 .mr16{
     margin-right: 16px;
 }
+.mr24{
+    margin-right: 24px;
+}
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -162,20 +171,26 @@ body{
     font-weight: 700;
     line-height: 42px;
 }
-.dot{
+.header ul{
+    display: flex;
+}
+.about .dot{
+    max-width: 384px;
+    border-top: 1px solid #000;
+}
+.dot li{
+    position: relative;
+    display: inline-block;
+}
+.dot li::after{
+    position: absolute;
     width: 22px;
     height: 22px;
     background-color: #891818;
     border-radius: 50%;
-}
-.about ul{
-    max-width: 384px;
-    border-top: 1px solid #000;
-}
-.about li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 10px;
+    left: -38px;
+    content: "";
 }
 .bgBlack{
     background-color: #000;
@@ -185,17 +200,13 @@ body{
 }
 .brandImg{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-}
-.brandImg img{
-    width: 49%;
 }
 .design ul{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 .w32{
     width: 32%;
@@ -208,4 +219,11 @@ body{
 }
 .brand, .work, footer{
     font-weight: 500;
+}
+footer a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+footer a:hover{
+    opacity: 0.6;
 }
